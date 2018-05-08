@@ -1,0 +1,28 @@
+{
+  "name": "weathered",
+  "productName": "Weathered",
+  "version": "2.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "Kevin Sawicki, Nathan Henderson, Eric Hollenberry, Hector Alfaro",
+  "scripts": {
+    "start": "electron .",
+      "build-darwin"  : "electron-packager . electron-weather --platform=darwin --icon Icons/rain.icns --overwrite",
+      "build-mas"     : "electron-packager . electron-weather --platform=mas --icon Icons/rain.icns --overwrite",
+      "build-linux"   : "electron-packager . electron-weather --platform=linux --icon Icons/rain.png --overwrite",
+      "build-win32"   : "electron-packager . electron-weather --platform=win32 --icon Icons/rain.ico --overwrite",
+      "build"         : "npm run build-darwin && npm run build-mas && npm run build-linux && npm run build-win32"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/universeworkshops/electron-weather.git"
+  },
+  "bugs": {
+    "url": "https://github.com/universeworkshops/electron-weather/issues"
+  },
+  "homepage": "https://github.com/universeworkshops/electron-weather#readme",
+  "devDependencies": {
+    "electron": "^1.6.8",
+    "menubar": "^5.2.3"
+  }
+}
